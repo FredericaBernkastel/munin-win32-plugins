@@ -15,9 +15,9 @@ counters = psutil.disk_io_counters(perdisk=True)
 if len(sys.argv) == 2:
 	if sys.argv[1] == "config":
 		print("graph_title Utilization per device")
-		print("graph_info Time spent reading/writing from disk.")
+		print("graph_info Disk queue length (normalized).")
 		print("graph_args --base 1000 -l 0 -u 1 -r")
-		print("graph_vlabel IO time in seconds")
+		print("graph_vlabel % busy")
 		print("graph_category disk")
 		
 		for disk in counters:

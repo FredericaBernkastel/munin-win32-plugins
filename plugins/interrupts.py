@@ -7,7 +7,7 @@ if len(sys.argv) == 2:
 		print("graph_title Interrupts and context switches")
 		# Arguments to "rrdtool graph". In this case, tell it that the
 		# lower limit of the graph is '0', and that 1k=1000 (not 1024)
-		print("graph_args --base 1000 -l 0")
+		print("graph_args --base 1000 --logarithmic")
 		# The Y-axis label
 		print("graph_vlabel interrupts & ctx switches / ${graph_period}")
 		# Graph category
